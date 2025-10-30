@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prince Kumar Yadav - Developer Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(0, 0, 58);
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 0 23px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
+      nav ul li a:hover {
+        color: rgb(159, 159, 247);
+      }
+      .left {
+        font-size: 1.5rem;
+      }
+
+      /* First Section */
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: 150px 0;
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        font-size: 2.5rem;
+      }
+      .rightSection img {
+        width: 80%;
+      }
+      .purple {
+        font-size: 3rem;
+        color: rgb(170, 107, 228);
+      }
+      #element {
+        color: rgb(170, 107, 228);
+      }
+      .profileBtn {
+        display: flex;
+        justify-content: space-between;
+      }
+      .chk-rsm {
+        margin-top: 85px;
+        margin-right: 10px;
+        appearance: button;
+        text-decoration: none;
+        width: 95%;
+        max-width: 300px;
+        text-align: center;
+        padding: 16px 0px;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 600;
+        background-color: #1e2167;
+        border: 0.5px solid #fff;
+        transition: 0.2s ease-in-out !important;
+      }
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 0.5px;
+        margin: 40px 80px;
+      }
+
+      /* Experience Section */
+      #experience {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        min-height: 100vh;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: #aaa;
+        margin-bottom: 40px;
+      }
+
+      .timeline {
+        position: relative;
+        width: 90%;
+        max-width: 800px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 25px;
+        top: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, #8b5cf6, #6366f1);
+        border-radius: 10px;
+      }
+
+      .experience-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(138, 99, 255, 0.4);
+        border-radius: 10px;
+        padding: 20px 25px;
+        margin-left: 60px;
+        position: relative;
+        transition: 0.3s ease;
+      }
+
+      .experience-card:hover {
+        border-color: #8b5cf6;
+      }
+
+      .experience-card::before {
+        content: "";
+        position: absolute;
+        left: -39px;
+        top: 20px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #8b5cf6;
+      }
+
+      .experience-card h2 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .experience-card h3 {
+        font-size: 1rem;
+        color: #c7c7c7;
+      }
+
+      .date {
+        font-size: 0.9rem;
+        color: #aaa;
+        margin: 5px 0 10px;
+      }
+
+      .desc {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        color: #ddd;
+        margin-bottom: 10px;
+      }
+
+      .skills {
+        font-size: 0.9rem;
+        color: #ccc;
+      }
+
+      /* Skills Section */
+      #skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 100px 20px;
+        min-height: 100vh;
+      }
+
+      #skills .section-title {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+
+      #skills .section-subtitle {
+        color: #aaa;
+        margin-bottom: 60px;
+        font-size: 1rem;
+        max-width: 600px;
+      }
+
+      .skills-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+        gap: 40px;
+        width: 90%;
+        max-width: 1100px;
+      }
+
+      .skill-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(138, 99, 255, 0.4);
+        border-radius: 10px;
+        padding: 25px;
+        transition: 0.3s ease;
+      }
+
+      .skill-card:hover {
+        border-color: #8b5cf6;
+        transform: translateY(-5px);
+      }
+
+      .skill-card h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .skill-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .skill-items span {
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 8px 14px;
+        background: rgba(255, 255, 255, 0.05);
+        transition: all 0.2s ease;
+        font-size: 0.95rem;
+        color: #eee;
+      }
+
+      .skill-items span:hover {
+        background: rgba(139, 92, 246, 0.15);
+        border-color: #8b5cf6;
+        transform: scale(1.05);
+      }
+
+      /* Projects */
+      .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 30px;
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .project-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(138, 99, 255, 0.4);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: left;
+        transition: 0.3s;
+      }
+      .project-card:hover {
+        border-color: #8b5cf6;
+      }
+      .project-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+
+      .tags span {
+        background: rgba(139, 92, 246, 0.1);
+        color: #c6b8ff;
+        padding: 5px 10px;
+        border-radius: 6px;
+        font-size: 0.8rem;
+        border: 1px solid rgba(139, 92, 246, 0.3);
+        margin-right: 5px;
+      }
+
+      /* Education */
+      #education .timeline {
+        position: relative;
+        width: 90%;
+        max-width: 900px;
+        margin: 50px auto 0;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .education-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(138, 99, 255, 0.4);
+        border-radius: 10px;
+        padding: 20px 25px;
+        margin-left: 60px;
+        position: relative;
+        transition: 0.3s ease;
+      }
+
+      .education-card::before {
+        content: "";
+        position: absolute;
+        left: -39px;
+        top: 25px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: #8b5cf6;
+      }
+
+      /* Contact Section */
+      #contact {
+        padding: 100px 0;
+        text-align: center;
+        color: #fff;
+      }
+
+      .contact-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+      }
+
+      .contact-form {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(138, 99, 255, 0.3);
+        border-radius: 15px;
+        padding: 30px;
+        width: 90%;
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        padding: 12px 15px;
+        color: #fff;
+        font-size: 1rem;
+        outline: none;
+      }
+
+      .btn-submit {
+        background: linear-gradient(90deg, #1e2167, #a855f7, #1e2167);
+        color: white;
+        font-size: 1.1rem;
+        padding: 12px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 0.5px solid #fff;
+      }
+
+      .btn-submit:hover {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+      }
+
+      /* Footer */
+      footer {
+        background: #0c0b11;
+        color: #ccc;
+        padding: 50px 0 30px;
+        text-align: center;
+        border-top: 1px solid rgba(139, 92, 246, 0.3);
+      }
+      .footer-links a {
+        color: #ddd;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+      .footer-links a:hover {
+        color: #a855f7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <div class="left">Prince's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          Hi, My name is <span class="purple">Prince Kumar Yadav</span>
+          <div>and I am a passionate</div>
+          <span id="element"></span> <br />
+          <div class="profileBtn">
+            <a href="Prince'sResume.pdf" class="chk-rsm">Download Resume</a>
+            <a href="https://github.com/codeyourcareer" class="chk-rsm">Github</a>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="bg.png" alt="" />
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Skills -->
+      <section id="skills">
+        <h1 class="section-title">Skills</h1>
+        <p class="section-subtitle">
+          Skilled in programming, web technologies, and cloud platforms with a
+          strong foundation in Java, PHP, and AWS.
+        </p>
+        <div class="skills-container">
+          <div class="skill-card">
+            <h2>Frontend Development</h2>
+            <div class="skill-items">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Bootstrap</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h2>Backend & Cloud</h2>
+            <div class="skill-items">
+              <span>PHP</span>
+              <span>SQL</span>
+              <span>Firebase</span>
+              <span>AWS (EC2, S3, RDS)</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h2>Programming</h2>
+            <div class="skill-items">
+              <span>Java</span>
+              <span>C</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <h2>Tools & DevOps</h2>
+            <div class="skill-items">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Linux</span>
+              <span>VS Code</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Experience -->
+      <section id="experience">
+        <h1 class="section-title">Experience</h1>
+        <p class="section-subtitle">
+          Real-world project experience and academic contributions.
+        </p>
+
+        <div class="timeline">
+          <div class="experience-card">
+            <h2>Intern - Secondary Radar Monopulse Tuner</h2>
+            <h3>Bharat Electronics Limited, Ghaziabad</h3>
+            <p class="date">Aug 2025 - Sep 2025</p>
+            <p class="desc">
+              Completed internship training under the Human Resource Development
+              Department. Worked on the project
+              <strong>“Secondary Radar Monopulse Tuner”</strong> as part of the
+              B.Tech (CSE) program from Vishveshwarya Group of Institutions,
+              Dadri, Greater Noida. Demonstrated excellent performance
+              throughout the internship.
+            </p>
+            <p class="skills">
+              <strong>Skills:</strong> • Python • Pandas • Matplotlib •
+              Electronics • Signal Processing
+            </p>
+          </div>
+          <!-- <div class="experience-card">
+            <h2>Software Developer (Student Projects)</h2>
+            <h3>Vishveshwarya Group of Institutions, Greater Noida</h3>
+            <p class="date">Nov 2024 - Present</p>
+            <p class="desc">
+              Worked on multiple academic and real-world development projects,
+              integrating cloud and AI components. Collaborated in full-stack
+              application design and deployment.
+            </p>
+            <p class="skills">
+              <strong>Skills:</strong> • Java • PHP • HTML • CSS • JS • SQL •
+              Bootstrap • Python
+            </p>
+          </div> -->
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Projects -->
+      <section id="projects">
+        <h1 class="section-title">Projects</h1>
+        <p class="section-subtitle">
+          Some of my featured and unique academic projects.
+        </p>
+        <div class="projects-container">
+          <div class="project-card">
+            <img
+              src="Screenshot_(7).png"
+              alt="Doctor-Patient Video Call Platform"
+            />
+            <div class="tags">
+              <span>Frontend</span>
+              <span>Backend</span>
+              <span>API</span>
+              <span>Database</span>
+            </div>
+            <h2>Doctor-Patient Video Call Platform</h2>
+            <p class="date">Aug 2024 - Oct 2024</p>
+            <p class="desc">
+              A global telemedicine platform enabling secure video consultations
+              between certified doctors and patients worldwide. Includes
+              prescription management, medicine purchase integration, and
+              responsive design for seamless healthcare access.
+            </p>
+          </div>
+
+          <div class="project-card">
+            <img src="softfiler2.png" alt="Software Downloader Website" />
+            <div class="tags">
+              <span>Frontend</span><span>Backend</span><span>SEO</span>
+            </div>
+            <h2>Software Downloader Website</h2>
+            <p class="date">Dec 2024 - Present</p>
+            <p class="desc">
+              A web-based software downloading system, optimized for performance
+              with 20% faster downloads and over 500 daily users.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Education -->
+      <section id="education">
+        <h1 class="section-title">Education</h1>
+        <div class="timeline">
+          <div class="education-card">
+            <h2>Vishveshwarya Group of Institutions, Greater Noida</h2>
+            <h3>B.Tech - Computer Science & Engineering</h3>
+            <p class="date">Oct 2022 - Jul 2026</p>
+            <p><strong>CGPA:</strong> 7/10</p>
+          </div>
+
+          <div class="education-card">
+            <h2>L.N.Y.T Intermediate School, Markara, Deoria</h2>
+            <h3>Intermediate - Math & Science</h3>
+            <p class="date">Jul 2020 - Jun 2022</p>
+            <p><strong>CGPA:</strong> 5.7/10</p>
+          </div>
+
+          <div class="education-card">
+            <h2>Assumption Public School, Gorakhpur, Deoria</h2>
+            <h3>High School</h3>
+            <p class="date">Apr 2018 - Jul 2020</p>
+            <p><strong>CGPA:</strong> 4.9/10</p>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Contact -->
+      <section id="contact">
+        <h1 class="section-title">Contact Me</h1>
+        <p class="section-subtitle">
+          Feel free to reach out for collaborations or opportunities 👋
+        </p>
+
+        <div class="contact-container">
+          <form
+            class="contact-form"
+            action="mailto:princeyad589@gmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+            />
+            <input type="text" name="subject" placeholder="Subject" required />
+            <textarea
+              name="message"
+              rows="5"
+              placeholder="Message"
+              required
+            ></textarea>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <h2 class="footer-name">Prince Kumar Yadav</h2>
+        <div class="footer-links">
+          <a
+            href="https://www.linkedin.com/in/prince-kumar-yadav-a569a8371/"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/codeyourcareer" target="_blank">GitHub</a>
+          <a href="mailto:princeyad589@gmail.com">Email</a>
+        </div>
+        <p class="copyright">© 2025 Prince Kumar Yadav. All rights reserved.</p>
+      </footer>
+    </main>
+
+    <!-- Typed.js Animation -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Full-Stack Developer.",
+          "Java Developer.",
+          "Cloud Enthusiast.",
+          "Web Developer.",
+        ],
+        typeSpeed: 150,
+        backSpeed: 80,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
