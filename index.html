@@ -8,406 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-      }
-      body {
-        background-color: rgb(0, 0, 33);
-        color: white;
-      }
-      nav {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: rgb(0, 0, 58);
-      }
-      nav ul {
-        display: flex;
-        justify-content: center;
-      }
-      nav ul li {
-        list-style: none;
-        margin: 0 23px;
-      }
-      nav ul li a {
-        text-decoration: none;
-        color: white;
-      }
-      nav ul li a:hover {
-        color: rgb(159, 159, 247);
-      }
-      .left {
-        font-size: 1.5rem;
-      }
-
-      /* First Section */
-      .firstSection {
-        display: flex;
-        justify-content: space-around;
-        margin: 150px 0;
-      }
-      .firstSection > div {
-        width: 30%;
-      }
-      .leftSection {
-        font-size: 2.5rem;
-      }
-      .rightSection img {
-        width: 80%;
-      }
-      .purple {
-        font-size: 3rem;
-        color: rgb(170, 107, 228);
-      }
-      #element {
-        color: rgb(170, 107, 228);
-      }
-      .profileBtn {
-        display: flex;
-        justify-content: space-between;
-      }
-      .chk-rsm {
-        margin-top: 85px;
-        margin-right: 10px;
-        appearance: button;
-        text-decoration: none;
-        width: 95%;
-        max-width: 300px;
-        text-align: center;
-        padding: 16px 0px;
-        color: white;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 20px;
-        font-weight: 600;
-        background-color: #1e2167;
-        border: 0.5px solid #fff;
-        transition: 0.2s ease-in-out !important;
-      }
-      main hr {
-        border: 0;
-        background: #9c97f1;
-        height: 0.5px;
-        margin: 40px 80px;
-      }
-
-      /* Experience Section */
-      #experience {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
-        min-height: 100vh;
-      }
-
-      .section-title {
-        font-size: 2.5rem;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        color: #aaa;
-        margin-bottom: 40px;
-      }
-
-      .timeline {
-        position: relative;
-        width: 90%;
-        max-width: 800px;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-      }
-
-      .timeline::before {
-        content: "";
-        position: absolute;
-        left: 25px;
-        top: 0;
-        width: 3px;
-        height: 100%;
-        background: linear-gradient(180deg, #8b5cf6, #6366f1);
-        border-radius: 10px;
-      }
-
-      .experience-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(138, 99, 255, 0.4);
-        border-radius: 10px;
-        padding: 20px 25px;
-        margin-left: 60px;
-        position: relative;
-        transition: 0.3s ease;
-      }
-
-      .experience-card:hover {
-        border-color: #8b5cf6;
-      }
-
-      .experience-card::before {
-        content: "";
-        position: absolute;
-        left: -39px;
-        top: 20px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background: #8b5cf6;
-      }
-
-      .experience-card h2 {
-        font-size: 1.3rem;
-        font-weight: 600;
-        color: #fff;
-      }
-
-      .experience-card h3 {
-        font-size: 1rem;
-        color: #c7c7c7;
-      }
-
-      .date {
-        font-size: 0.9rem;
-        color: #aaa;
-        margin: 5px 0 10px;
-      }
-
-      .desc {
-        font-size: 0.95rem;
-        line-height: 1.5;
-        color: #ddd;
-        margin-bottom: 10px;
-      }
-
-      .skills {
-        font-size: 0.9rem;
-        color: #ccc;
-      }
-
-      /* Skills Section */
-      #skills {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        padding: 100px 20px;
-        min-height: 100vh;
-      }
-
-      #skills .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 10px;
-      }
-
-      #skills .section-subtitle {
-        color: #aaa;
-        margin-bottom: 60px;
-        font-size: 1rem;
-        max-width: 600px;
-      }
-
-      .skills-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-        gap: 40px;
-        width: 90%;
-        max-width: 1100px;
-      }
-
-      .skill-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(138, 99, 255, 0.4);
-        border-radius: 10px;
-        padding: 25px;
-        transition: 0.3s ease;
-      }
-
-      .skill-card:hover {
-        border-color: #8b5cf6;
-        transform: translateY(-5px);
-      }
-
-      .skill-card h2 {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-        color: #fff;
-      }
-
-      .skill-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-      }
-
-      .skill-items span {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        padding: 8px 14px;
-        background: rgba(255, 255, 255, 0.05);
-        transition: all 0.2s ease;
-        font-size: 0.95rem;
-        color: #eee;
-      }
-
-      .skill-items span:hover {
-        background: rgba(139, 92, 246, 0.15);
-        border-color: #8b5cf6;
-        transform: scale(1.05);
-      }
-
-      /* Projects */
-      .projects-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 30px;
-        width: 90%;
-        max-width: 1100px;
-        margin: 0 auto;
-      }
-      .project-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(138, 99, 255, 0.4);
-        border-radius: 15px;
-        padding: 20px;
-        text-align: left;
-        transition: 0.3s;
-      }
-      .project-card:hover {
-        border-color: #8b5cf6;
-      }
-      .project-card img {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 15px;
-      }
-
-      .tags span {
-        background: rgba(139, 92, 246, 0.1);
-        color: #c6b8ff;
-        padding: 5px 10px;
-        border-radius: 6px;
-        font-size: 0.8rem;
-        border: 1px solid rgba(139, 92, 246, 0.3);
-        margin-right: 5px;
-      }
-
-      /* Education */
-      #education .timeline {
-        position: relative;
-        width: 90%;
-        max-width: 900px;
-        margin: 50px auto 0;
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-      }
-
-      .education-card {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(138, 99, 255, 0.4);
-        border-radius: 10px;
-        padding: 20px 25px;
-        margin-left: 60px;
-        position: relative;
-        transition: 0.3s ease;
-      }
-
-      .education-card::before {
-        content: "";
-        position: absolute;
-        left: -39px;
-        top: 25px;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background: #8b5cf6;
-      }
-
-      /* Contact Section */
-      #contact {
-        padding: 100px 0;
-        text-align: center;
-        color: #fff;
-      }
-
-      .contact-container {
-        display: flex;
-        justify-content: center;
-        margin-top: 40px;
-      }
-
-      .contact-form {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(138, 99, 255, 0.3);
-        border-radius: 15px;
-        padding: 30px;
-        width: 90%;
-        max-width: 600px;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .contact-form input,
-      .contact-form textarea {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 8px;
-        padding: 12px 15px;
-        color: #fff;
-        font-size: 1rem;
-        outline: none;
-      }
-
-      .btn-submit {
-        background: linear-gradient(90deg, #1e2167, #a855f7, #1e2167);
-        color: white;
-        font-size: 1.1rem;
-        padding: 12px;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: 0.3s;
-        border: 0.5px solid #fff;
-      }
-
-      .btn-submit:hover {
-        box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
-      }
-
-      /* Footer */
-      footer {
-        background: #0c0b11;
-        color: #ccc;
-        padding: 50px 0 30px;
-        text-align: center;
-        border-top: 1px solid rgba(139, 92, 246, 0.3);
-      }
-      .footer-links a {
-        color: #ddd;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-      .footer-links a:hover {
-        color: #a855f7;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
+    <div id="scrollTracker"></div>
     <header>
       <nav>
         <div class="left">Prince's Portfolio</div>
-        <div class="right">
+        <div class="menu-btn" id="menuBtn">&#9776;</div>
+        <div class="right" id="navLinks">
           <ul>
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -427,7 +37,9 @@
           <span id="element"></span> <br />
           <div class="profileBtn">
             <a href="Prince'sResume.pdf" class="chk-rsm">Download Resume</a>
-            <a href="https://github.com/codeyourcareer" class="chk-rsm">Github</a>
+            <a href="https://github.com/codeyourcareer" class="chk-rsm"
+              >Github</a
+            >
           </div>
         </div>
         <div class="rightSection">
@@ -558,6 +170,52 @@
               prescription management, medicine purchase integration, and
               responsive design for seamless healthcare access.
             </p>
+            <div class="project-actions">
+              <a
+                href="https://github.com/CodeYourCareer/doctor-patient-video-call-platform"
+                class="btn btn-source"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View source code on GitHub"
+              >
+                <!-- GitHub icon (small) -->
+                <svg
+                  class="icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.73.5.98 5.25.98 11.53c0 4.66 3.02 8.61 7.22 10.01.53.1.72-.23.72-.52 0-.26-.01-.95-.01-1.86-2.94.64-3.56-1.13-3.56-1.13-.48-1.21-1.17-1.53-1.17-1.53-.96-.66.07-.65.07-.65 1.06.07 1.62 1.09 1.62 1.09.94 1.6 2.47 1.14 3.07.87.1-.67.37-1.14.67-1.4-2.35-.27-4.82-1.18-4.82-5.23 0-1.16.41-2.1 1.08-2.85-.11-.27-.47-1.36.1-2.84 0 0 .88-.28 2.88 1.08A9.96 9.96 0 0 1 12 6.8c.89.01 1.79.12 2.62.35 2-1.36 2.88-1.08 2.88-1.08.57 1.48.21 2.57.1 2.84.67.75 1.08 1.69 1.08 2.85 0 4.05-2.48 4.96-4.84 5.22.38.33.73.98.73 1.98 0 1.43-.01 2.58-.01 2.93 0 .29.19.63.73.52 4.2-1.4 7.22-5.35 7.22-10.01C23.02 5.25 18.27.5 12 .5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>Source</span>
+              </a>
+
+              <a
+                href="https://your-live-demo.example"
+                class="btn btn-live"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open live preview"
+              >
+                <!-- External / Play icon -->
+                <svg
+                  class="icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path d="M4 2v20l18-10L4 2z" fill="currentColor" />
+                </svg>
+                <span>Live</span>
+              </a>
+            </div>
           </div>
 
           <div class="project-card">
@@ -571,6 +229,52 @@
               A web-based software downloading system, optimized for performance
               with 20% faster downloads and over 500 daily users.
             </p>
+            <div class="project-actions">
+              <a
+                href="https://github.com/CodeYourCareer/Softfiler"
+                class="btn btn-source"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="View source code on GitHub"
+              >
+                <!-- GitHub icon (small) -->
+                <svg
+                  class="icon"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 .5C5.73.5.98 5.25.98 11.53c0 4.66 3.02 8.61 7.22 10.01.53.1.72-.23.72-.52 0-.26-.01-.95-.01-1.86-2.94.64-3.56-1.13-3.56-1.13-.48-1.21-1.17-1.53-1.17-1.53-.96-.66.07-.65.07-.65 1.06.07 1.62 1.09 1.62 1.09.94 1.6 2.47 1.14 3.07.87.1-.67.37-1.14.67-1.4-2.35-.27-4.82-1.18-4.82-5.23 0-1.16.41-2.1 1.08-2.85-.11-.27-.47-1.36.1-2.84 0 0 .88-.28 2.88 1.08A9.96 9.96 0 0 1 12 6.8c.89.01 1.79.12 2.62.35 2-1.36 2.88-1.08 2.88-1.08.57 1.48.21 2.57.1 2.84.67.75 1.08 1.69 1.08 2.85 0 4.05-2.48 4.96-4.84 5.22.38.33.73.98.73 1.98 0 1.43-.01 2.58-.01 2.93 0 .29.19.63.73.52 4.2-1.4 7.22-5.35 7.22-10.01C23.02 5.25 18.27.5 12 .5z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <span>Source</span>
+              </a>
+
+              <a
+                href="https://97club.liveblog365.com/"
+                class="btn btn-live"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open live preview"
+              >
+                <!-- External / Play icon -->
+                <svg
+                  class="icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path d="M4 2v20l18-10L4 2z" fill="currentColor" />
+                </svg>
+                <span>Live</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -668,6 +372,51 @@
         typeSpeed: 150,
         backSpeed: 80,
         loop: true,
+      });
+
+      const nav = document.querySelector("nav");
+      const firstSection = document.querySelector(".firstSection");
+
+      window.addEventListener("scroll", () => {
+        const firstSectionBottom =
+          firstSection.offsetTop + firstSection.offsetHeight;
+        if (window.scrollY > firstSectionBottom - 100) {
+          nav.classList.add("show");
+        } else {
+          nav.classList.remove("show");
+        }
+      });
+
+      const tracker = document.getElementById("scrollTracker");
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight =
+          document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+        tracker.style.background = `conic-gradient(#8b5cf6 ${scrollPercent}%, #1e2167 ${scrollPercent}%)`;
+        tracker.setAttribute("data-progress", scrollPercent);
+
+        // Hide tracker at top and show when scrolling
+        if (scrollPercent < 2) {
+          tracker.classList.add("hide");
+        } else {
+          tracker.classList.remove("hide");
+        }
+      });
+
+      const menuBtn = document.getElementById("menuBtn");
+      const navLinks = document.getElementById("navLinks");
+
+      menuBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+
+        // toggle icon between ☰ and ✖
+        if (menuBtn.innerHTML === "&#9776;" || menuBtn.innerHTML === "☰") {
+          menuBtn.innerHTML = "✖";
+        } else {
+          menuBtn.innerHTML = "☰";
+        }
       });
     </script>
   </body>
